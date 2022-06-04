@@ -8,6 +8,7 @@ EXPOSE $SERVER_PORT
 # Cavoke server
 ENV CAVOKE_GAME_ROOT="$IROOT/cavoke_game/"
 ADD ./ $CAVOKE_GAME_ROOT
+ADD ./assets/ /home/assets/
 WORKDIR $CAVOKE_GAME_ROOT
 # Install server
 RUN mkdir -p build && \
@@ -15,5 +16,7 @@ RUN mkdir -p build && \
     make -C build install
 WORKDIR /
 RUN rm -rf $CAVOKE_GAME_ROOT
+
+WORKDIR /home
 
 ENTRYPOINT ["/usr/local/bin/my_cavoke_game_server"]

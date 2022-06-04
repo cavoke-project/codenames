@@ -1,19 +1,15 @@
-import QtQuick 2.0
+import QtQuick 2.15
+import QtQuick.Window 2.15
+import "src/components"
+import "src/screens"
 
 Rectangle {
-    // BEGIN cavoke section
-    Connections {
-        target: cavoke
+    width: 1280
+    height: 768
+    //anchors.fill: parent
+    visible: true
 
-        function onReceiveUpdate(jsonUpdate) {
-            console.log("Received: " + jsonUpdate);
-            // TODO: Implement your state update here
-        }
-    }
-    // END cavoke section
-
-    onClicked: {
-        // TODO: You can send a move using the globally available object
-        cavoke.sendMove("<my move>");
+    Game {
+        anchors.fill: parent
     }
 }

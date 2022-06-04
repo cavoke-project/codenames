@@ -13,11 +13,15 @@ include_directories(${CAVOKE_H_DIR})
 include_directories(${CAVOKE_DEV_SERVER_H_DIR})
 
 add_executable(my_cavoke_game
-        my_cavoke_game.cpp
+        codenames.cpp
+        model.cpp
+        wordlists.cpp
         ${CAVOKE_H_DIR}/cavoke.cpp)
 
 add_executable(my_cavoke_game_server
-        my_cavoke_game.cpp
+        codenames.cpp
+        model.cpp
+        wordlists.cpp
         ${CAVOKE_DEV_SERVER_H_DIR}/cavoke.cpp
         ${CAVOKE_DEV_SERVER_H_DIR}/controllers/logic_controller.cpp)
 

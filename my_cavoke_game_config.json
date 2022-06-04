@@ -1,15 +1,20 @@
 {
-  "id": "my_cavoke_game",
-  "display_name": "My Cavoke Game",
-  "description": "Template Cavoke Game",
-  "players_num": 4,
+  "id": "codenames",
+  "display_name": "Codenames",
+  "description": "Two teams compete by each having a \"spymaster\" give one-word clues that can point to multiple words on the board. The other players on the team attempt to guess their team's words while avoiding the words of the other team.",
+  "players_num": 6,
   "role_names": [
-    "Player A",
-    "Player B",
-    "Player C",
-    "Player D"
+    "blue captain",
+    "red captain",
+    "blue player",
+    "red player",
+    "blue player",
+    "red player"
   ],
   "default_settings": {
+    "board_h": 5,
+    "board_w": 5,
+    "word_list": "ru"
   },
   "app_type": "LOCAL",
   "url": ""
